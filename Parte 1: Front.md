@@ -57,7 +57,7 @@ Crie a estrutura HTML5 básica com:
 
 ### **Etapa 3: Implementação por Componentes**
 
-**5. Docuemnto do backlog do produto**
+**5. Documento do backlog do produto**
 
 ```
 Crie o backlog do produto.
@@ -130,7 +130,7 @@ Faça uma revisão completa do código verificando:
 - Conformidade com padrões web
 - Otimizações de performance
 - Comentários e documentação do código
-Crie a documento:
+Crie o documento:
 Resumo
 [Breve descrição da mudança]
 Tarefa Relacionada:
@@ -143,7 +143,6 @@ Refatoração
 Documentação
 Estilo (formatação, identação, etc.)
 Outro: ___
-
 O que foi feito:
 [Descrever de forma objetiva o que foi implementado ou corrigido]
 Como Testar:
