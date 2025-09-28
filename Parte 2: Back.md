@@ -331,52 +331,78 @@ Configure rastreamento de erros:
 
 ### **Etapa 10: Configuração do Banco de Dados**
 
-**26. Configuração do MongoDB**
+**26. Configuração do Banco de Dados**
 **Prompt:**
 
 ```
-Configure conexão com MongoDB:
-- Configure conexão usando Mongoose
-- Implemente string de conexão configurável
-- Configure pooling de conexões
-- Adicione tratamento de erros de conexão
-- Configure diferentes ambientes (dev, test, prod)
+Configure conexão com banco de dados:
+- Permitir escolha entre MongoDB, PostgreSQL ou SQLite
+- Usar variáveis de ambiente para definir o banco ativo
+- Implementar string de conexão configurável
+- Configurar pooling de conexões
+- Adicionar tratamento de erros de conexão
+- Configurar diferentes ambientes (dev, test, prod)
 ```
 
-**27. Modelos de dados**
+---
+
+**27. Modelos de Dados / Schemas**
 **Prompt:**
 
 ```
-Crie schemas Mongoose:
-- Implemente schema de usuários com validações
-- Adicione índices para performance
-- Configure timestamps automáticos
-- Implemente métodos personalizados do modelo
-- Adicione hooks de pre/post save
+Implemente modelos de dados conforme banco escolhido:
+
+- MongoDB (via Mongoose):
+  - Criar schemas com validações
+  - Adicionar índices para performance
+  - Configurar timestamps automáticos
+  - Implementar métodos personalizados
+  - Adicionar hooks pre/post save
+
+- PostgreSQL / SQLite (via Prisma ou Sequelize):
+  - Criar modelos com tipos de dados e restrições
+  - Definir chaves primárias, estrangeiras e índices
+  - Configurar migrations automáticas
+  - Implementar relacionamentos (1:N, N:N)
+  - Adicionar validações no nível do banco
 ```
 
-**28. CRUD completo**
+---
+
+**28. CRUD Completo**
 **Prompt:**
 
 ```
-Implemente operações CRUD completas:
-- Create, Read, Update, Delete para usuários
-- Use modelos MongoDB em vez de array em memória
-- Configure validação no nível do banco
-- Implemente paginação nas consultas
-- Adicione tratamento de erros específicos do banco
+Implemente operações CRUD para usuários (Create, Read, Update, Delete):
+
+- Usar abstração para não depender de um único banco
+- MongoDB: usar métodos do Mongoose
+- PostgreSQL / SQLite: usar ORM (Prisma/Sequelize/Knex)
+- Configurar paginação nas consultas
+- Adicionar tratamento de erros específicos do banco
+- Garantir validações em camada de aplicação + banco
 ```
 
-**29. Migrations e seeds**
+---
+
+**29. Migrations e Seeds**
 **Prompt:**
 
 ```
 Configure gestão de dados:
-- Crie scripts para popular banco com dados iniciais
-- Implemente sistema básico de migrations
-- Configure versionamento de schema
-- Crie scripts de backup e restore
-- Documente procedimentos de migração
+
+- MongoDB:
+  - Criar scripts de seed com coleções iniciais
+  - Implementar controle de versões de schema (migrate-mongo)
+  - Criar scripts de backup e restore
+
+- PostgreSQL / SQLite:
+  - Implementar migrations com Prisma/Sequelize/Knex
+  - Criar seeds para popular tabelas iniciais
+  - Configurar rollback de migrations
+  - Criar scripts de backup e restore
+
+- Documentar procedimentos de migração para cada banco
 ```
 
 ---
